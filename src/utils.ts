@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { join, parse, dirname } from 'path';
 import { winPath } from '@umijs/utils';
-import { sourceFormatter } from '@sensoro/babel-plugin-dynamic-module/es/utils';
+import { sourceFormatter } from '@sensoro/babel-plugin-dynamic-module/lib/utils';
 
 import type { ExportModule, ModuleInfo } from './types';
 
