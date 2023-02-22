@@ -4,8 +4,5 @@ export default defineConfig({
   cjs: {
     output: 'lib',
   },
-  esm: {
-    output: 'es',
-  },
   platform: 'node',
 });
