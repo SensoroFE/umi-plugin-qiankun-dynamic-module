@@ -9,6 +9,7 @@ export interface ModuleInfo {
 }
 
 export interface Options {
+  /** 强制生效，默认只有生产环境生效 */
   forceApply?: boolean;
   modules: (string | ModuleInfo)[];
 }

@@ -45,8 +45,6 @@ export const buildExportModules = (
     }
     traverse(rootPath);
 
-    console.log(modules);
-
     return modules.map(module => ({
       ...module,
       path: winPath(module.path),

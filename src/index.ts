@@ -16,8 +16,14 @@ export default function(api: IApi) {
     config: {
       schema(joi) {
         return joi.object({
-          forceApply: joi.boolean(), //强制生效，默认只有生产环境生效
-          modules: joi.array().items(joi.string()),
+          forceApply: joi.boolean(),
+          modules: joi.array().items(
+            joi.string(),
+            joi.object({
+              name: joi.string(),
+              dir: joi.string(),
+            }),
+          ),
         });
       },
     },

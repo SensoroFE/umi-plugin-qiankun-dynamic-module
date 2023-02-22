@@ -5,10 +5,10 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "es",
     "lib"
   ],
   "scripts": {
+    "dev": "redbud dev",
     "build": "redbud build",
     "test": "jest",
     "release": "walrus release"
