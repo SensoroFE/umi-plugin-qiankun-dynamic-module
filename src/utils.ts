@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { join, parse, dirname } from 'path';
 import { winPath } from '@umijs/utils';
-import { sourceFormatter } from '@sensoro/babel-plugin-dynamic-module/lib/utils';
+import { sourceFormatter } from '@sensoro/babel-plugin-dynamic-module';
 
 import type { ExportModule, ModuleInfo } from './types';
 
@@ -19,7 +19,8 @@ export const buildExportModules = (
 
     function traverse(dir: string) {
       const attributeName = sourceFormatter(moduleInfo.name + winPath(dir.replace(rootPath, '')), {
-        moduleName: moduleInfo.name
+        moduleName: moduleInfo.name,
+        mountGlobal: false,
       });
       fs.readdirSync(dir).forEach((file: string) => {
         const pathname = join(dir, file);

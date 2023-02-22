@@ -14,7 +14,7 @@
     "release": "walrus release"
   },
   "dependencies": {
-    "@sensoro/babel-plugin-dynamic-module": "1.1.0",
+    "@sensoro/babel-plugin-dynamic-module": "1.2.0",
     "@umijs/types": "^3.5.32",
     "@umijs/utils": "^3.5.32"
   },
